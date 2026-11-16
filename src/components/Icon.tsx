@@ -1,6 +1,13 @@
 import type { CSSProperties } from 'react';
 
 const paths = {
+  settings: (
+    <>
+      <path d="M4 7h7m4 0h5M4 17h3m4 0h9" />
+      <circle cx="13" cy="7" r="2" />
+      <circle cx="9" cy="17" r="2" />
+    </>
+  ),
   leaf: (
     <>
       <path d="M12 21c0-7 1-12 8-17 2 8-1 13-8 13M12 21C12 14 8 9 3 8c-1 6 3 10 9 10" />

@@ -47,6 +47,8 @@ E-mail e senha na entrada são ilustrativos: **nenhum preenchimento é necessár
 
 A raiz encaminha ao perfil selecionado ou ao login. As verificações de perfil apenas organizam a navegação; **não representam autenticação ou controle de acesso real**.
 
+A página `/proprietario/configuracoes/` está disponível em **Configurações** no menu lateral e **Ajustes** no celular. Reúne popups de férias e ausências, confirmação por WhatsApp (1 dia ou 4 horas antes), disponibilidade semanal e mensagem de aniversário. As mensagens aceitam `$USER` e mostram uma prévia com nome de exemplo. O período de ausência lista sessões futuras e oferece links para o fluxo de reagendamento existente. As configurações são apenas prévias locais à página: não enviam mensagens, não bloqueiam horários e são descartadas ao sair ou recarregar. Cancelar um popup descarta suas edições.
+
 ## Dados temporários
 
 - Context e `useReducer` compartilham a mesma agenda entre as duas áreas na aba atual.

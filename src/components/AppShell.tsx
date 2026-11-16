@@ -22,6 +22,12 @@ const navigation: Record<Perfil, { href: string; label: string; short: string; i
         icon: 'calendar',
       },
       { href: '/proprietario/clientes', label: 'Meus clientes', short: 'Clientes', icon: 'users' },
+      {
+        href: '/proprietario/configuracoes',
+        label: 'Configurações',
+        short: 'Ajustes',
+        icon: 'settings',
+      },
     ],
     cliente: [
       { href: '/cliente/agendar', label: 'Agendar um cuidado', short: 'Agendar', icon: 'calendar' },
