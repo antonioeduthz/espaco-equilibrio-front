@@ -1,0 +1,214 @@
+.nextNote {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  background: #eeefe6;
+  border: 1px solid #e2e5d8;
+  border-radius: 14px;
+  padding: 29px 32px;
+  margin-bottom: 34px;
+}
+.nextNote > span {
+  color: var(--sage);
+  border: 1px solid #d3d9c6;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  width: 66px;
+  height: 66px;
+  flex-shrink: 0;
+}
+.nextNote h2 {
+  font-size: 27px;
+  margin: 8px 0;
+}
+.nextNote > div > p:last-child {
+  font-size: 12px;
+  margin: 0;
+  color: var(--muted);
+}
+.section {
+  margin-top: 31px;
+}
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+.sectionHeader h2 {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.sectionHeader h2 > span {
+  font-size: 10px;
+  background: #eeeee7;
+  color: var(--muted);
+  padding: 5px 8px;
+  border-radius: 5px;
+}
+.sectionHeader > span {
+  font-size: 10px;
+  color: var(--muted);
+}
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.card {
+  display: flex;
+  align-items: center;
+  gap: 23px;
+  padding: 24px;
+}
+.date {
+  width: 65px;
+  min-height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2px;
+  border: 1px solid var(--gold-line);
+  border-radius: 10px;
+  background: #fcfaf5;
+  flex-shrink: 0;
+  color: var(--gold-dark);
+}
+.date strong {
+  font-family: var(--font-display);
+  font-size: 31px;
+  font-weight: 400;
+}
+.date > span {
+  text-transform: uppercase;
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+.cardInfo {
+  flex: 1;
+}
+.cardInfo h3 {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 400;
+  margin: 9px 0 10px;
+}
+.cardInfo > p {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  flex-wrap: wrap;
+  font-size: 10px;
+  color: var(--muted);
+  margin: 0;
+}
+.cardInfo > p svg {
+  color: var(--gold);
+}
+.dot {
+  padding-inline: 2px;
+}
+.duration {
+  color: var(--muted);
+}
+.professional {
+  display: block;
+  font-size: 10px;
+  color: var(--muted);
+  margin-top: 10px;
+}
+.cancel {
+  font-size: 10px;
+  padding: 9px;
+  min-height: 36px;
+  align-self: flex-start;
+}
+.cancel:hover {
+  color: var(--danger) !important;
+  background: var(--danger-soft) !important;
+}
+.past {
+  background: #fcfcfa;
+}
+.past .date {
+  background: #f5f5f0;
+  border-color: var(--line);
+  color: var(--muted);
+}
+.past .cardInfo h3 {
+  color: #666e5f;
+}
+.emptyHistory {
+  border: 1px dashed var(--line);
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 12px;
+}
+@media (max-width: 700px) {
+  .nextNote {
+    padding: 23px 20px;
+    gap: 16px;
+  }
+  .nextNote > span {
+    width: 46px;
+    height: 54px;
+  }
+  .nextNote h2 {
+    font-size: 23px;
+  }
+  .nextNote :global(.eyebrow) {
+    font-size: 8px;
+  }
+  .nextNote > div > p:last-child {
+    font-size: 11px;
+  }
+  .sectionHeader > span {
+    display: none;
+  }
+  .card {
+    padding: 20px 17px;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .date {
+    width: 55px;
+    min-height: 74px;
+    align-self: flex-start;
+  }
+  .cardInfo {
+    min-width: 0;
+    flex-basis: calc(100% - 80px);
+  }
+  .cardInfo h3 {
+    font-size: 22px;
+  }
+  .cardInfo > p {
+    font-size: 11px;
+  }
+  .cancel {
+    margin-left: 70px;
+    padding-left: 0;
+    min-height: 44px;
+    font-size: 11px;
+  }
+  .cardInfo > p > .dot {
+    display: none;
+  }
+  .cardInfo > p > svg:nth-of-type(2) {
+    margin-left: 0;
+  }
+  .professional {
+    font-size: 11px;
+  }
+}

@@ -1,0 +1,294 @@
+.page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100dvh;
+  background: var(--paper);
+}
+.welcome {
+  position: relative;
+  overflow: hidden;
+  background: #eeeee5;
+  padding: 54px 68px 36px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+.welcomeContent {
+  margin: auto 0;
+  padding: 70px 0 75px;
+  z-index: 1;
+  position: relative;
+}
+.overline {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--gold-dark);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 2.2px;
+}
+.overline > span {
+  height: 1px;
+  width: 28px;
+  background: var(--gold);
+}
+.welcome h1 {
+  font-size: clamp(49px, 4.8vw, 76px);
+  line-height: 1.08;
+  letter-spacing: -2px;
+  margin: 27px 0 26px;
+}
+.welcome h1 em {
+  font-weight: 400;
+  color: var(--gold-dark);
+}
+.welcomeContent > p {
+  font-size: 14px;
+  line-height: 1.95;
+  color: var(--muted);
+}
+.signature {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 35px;
+  color: var(--muted);
+  font-size: 11px;
+}
+.signatureLine {
+  width: 35px;
+  height: 1px;
+  background: var(--gold-line);
+}
+.signature i {
+  font-family: var(--font-display);
+  font-size: 20px;
+  margin-left: 5px;
+  color: var(--ink);
+}
+.welcomeFooter {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--gold-dark);
+  position: relative;
+  z-index: 1;
+  font-size: 8px;
+  font-weight: 500;
+  letter-spacing: 1.6px;
+}
+.rings {
+  position: absolute;
+  right: -135px;
+  bottom: 70px;
+  width: 370px;
+  height: 550px;
+  transform: rotate(27deg);
+  opacity: 0.5;
+  pointer-events: none;
+}
+.rings span {
+  position: absolute;
+  inset: 0;
+  border: 1px solid #b7bb9c;
+  border-radius: 50%;
+}
+.rings span:nth-child(2) {
+  inset: 20px;
+}
+.rings span:nth-child(3) {
+  inset: 40px;
+}
+.rings span:nth-child(4) {
+  inset: 60px;
+}
+.loginArea {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 60px 48px 25px;
+}
+.loginCard {
+  width: 100%;
+  max-width: 370px;
+  margin: auto 0;
+}
+.entryIcon {
+  display: grid;
+  place-items: center;
+  color: var(--gold);
+  background: var(--gold-soft);
+  border-radius: 50%;
+  width: 59px;
+  height: 59px;
+  margin-bottom: 27px;
+}
+.loginCard h2 {
+  font-size: 34px;
+  line-height: 1.2;
+  margin: 12px 0;
+}
+.subtitle {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.8;
+  margin: 0 0 33px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.inputWrap {
+  position: relative;
+}
+.inputWrap > svg {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  color: #999b8f;
+}
+.inputWrap input {
+  padding-left: 44px;
+  height: 49px;
+}
+.enter {
+  margin-top: 3px;
+  width: 100%;
+  min-height: 49px;
+  justify-content: space-between;
+  padding-inline: 20px;
+}
+.demo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  color: var(--muted);
+  font-size: 10px;
+  margin: 15px 0 32px;
+}
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--muted);
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 1.25px;
+}
+.divider > span {
+  height: 1px;
+  background: var(--line);
+  flex: 1;
+}
+.owner {
+  width: 100%;
+  margin-top: 23px;
+  font-size: 12px;
+  color: var(--muted);
+  min-height: 48px;
+}
+.hours {
+  margin-top: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 10px;
+}
+.hours svg {
+  color: var(--gold);
+}
+.copyright {
+  font-size: 9px;
+  color: var(--muted);
+  margin: 45px 0 0;
+  text-align: center;
+}
+@media (min-width: 1600px) {
+  .welcome {
+    padding-left: max(68px, 10vw);
+  }
+  .loginCard {
+    max-width: 400px;
+  }
+}
+@media (max-width: 1000px) {
+  .welcome {
+    padding-inline: 36px;
+  }
+  .loginArea {
+    padding-inline: 32px;
+  }
+  .welcome h1 {
+    font-size: 58px;
+  }
+  .welcomeFooter {
+    font-size: 7px;
+    letter-spacing: 1px;
+  }
+}
+@media (max-width: 700px) {
+  .page {
+    display: flex;
+    flex-direction: column;
+  }
+  .welcome {
+    min-height: 0;
+    padding: 28px 25px 30px;
+  }
+  .welcomeContent {
+    padding: 35px 0 0;
+  }
+  .overline {
+    font-size: 8px;
+  }
+  .welcome h1 {
+    font-size: 43px;
+    line-height: 1.12;
+    margin: 18px 0 0;
+    letter-spacing: -1px;
+  }
+  .welcome h1 br {
+    display: none;
+  }
+  .welcome h1 em {
+    display: block;
+  }
+  .welcomeContent > p,
+  .signature,
+  .welcomeFooter {
+    display: none;
+  }
+  .rings {
+    width: 210px;
+    height: 320px;
+    right: -90px;
+    bottom: -70px;
+  }
+  .loginArea {
+    padding: 32px 24px 20px;
+  }
+  .loginCard {
+    max-width: 440px;
+  }
+  .entryIcon {
+    display: none;
+  }
+  .loginCard h2 {
+    font-size: 29px;
+  }
+  .subtitle {
+    margin-bottom: 24px;
+  }
+  .form {
+    gap: 18px;
+  }
+  .copyright {
+    margin-top: 30px;
+  }
+}
