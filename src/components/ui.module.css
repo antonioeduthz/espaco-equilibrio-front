@@ -4,14 +4,8 @@
   gap: 12px;
   color: var(--gold-dark);
 }
-.brandMark {
-  display: grid;
-  place-items: center;
+.brandLogo {
   flex-shrink: 0;
-  width: 48px;
-  height: 58px;
-  border: 1px solid var(--gold-line);
-  border-radius: 28px 28px 15px 15px;
 }
 .brandName {
   display: block;
@@ -37,10 +31,6 @@
 }
 .brandCompact .brandName {
   font-size: 23px;
-}
-.brandCompact .brandMark {
-  width: 40px;
-  height: 49px;
 }
 .brandCompact .brandSub {
   font-size: 8px;

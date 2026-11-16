@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useEffect, useId, useRef, type ButtonHTMLAttributes, type ReactNode } from 'react';
 import { Icon, type IconName } from './Icon';
 import styles from './ui.module.css';
@@ -20,11 +21,18 @@ export function Button({
 }
 
 export function Brand({ compact = false }: { compact?: boolean }) {
+  const logoSize = compact ? 52 : 80;
+
   return (
     <div className={`${styles.brand} ${compact ? styles.brandCompact : ''}`}>
-      <span className={styles.brandMark}>
-        <Icon name="leaf" size={31} />
-      </span>
+      <Image
+        src="/images/logo.svg"
+        alt=""
+        width={logoSize}
+        height={logoSize}
+        unoptimized
+        className={styles.brandLogo}
+      />
       <div>
         <span className={styles.brandName}>Marta Sátyl</span>
         <span className={styles.brandSub}>ESPAÇO EQUILÍBRIO</span>
