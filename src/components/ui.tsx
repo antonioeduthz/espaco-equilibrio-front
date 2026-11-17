@@ -26,7 +26,7 @@ export function Brand({ compact = false }: { compact?: boolean }) {
   return (
     <div className={`${styles.brand} ${compact ? styles.brandCompact : ''}`}>
       <Image
-        src="/images/logo.svg"
+        src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/logo.svg`}
         alt=""
         width={logoSize}
         height={logoSize}

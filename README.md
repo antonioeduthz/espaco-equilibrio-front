@@ -26,6 +26,29 @@ Encerre o servidor de desenvolvimento com `Ctrl+C` antes de iniciar a prévia, p
 
 O servidor de prévia serve apenas arquivos; não há backend de negócio. As rotas usam barra final e arquivos `index.html` por diretório. Abra o projeto por HTTP, e não diretamente pelo gerenciador de arquivos. Nenhuma publicação ou hospedagem externa é necessária.
 
+## Publicar no GitHub Pages
+
+No repositório `antonioeduthz/espaco-equilibrio-front`, o conteúdo desta pasta `Front/` fica **na raiz do repositório**, incluindo `.github/workflows/deploy-pages.yml`.
+
+1. Envie as alterações para a branch `main`.
+2. Abra **Settings → Pages → Build and deployment → Source** e selecione **GitHub Actions**.
+3. Em **Actions → Publicar no GitHub Pages**, execute **Run workflow** na branch `main` se a primeira execução ocorreu antes de habilitar o Pages.
+4. Aguarde os jobs `build` e `deploy`. Os próximos pushes em `main` publicam automaticamente.
+
+Endereço esperado: **https://antonioeduthz.github.io/espaco-equilibrio-front/**.
+
+O workflow usa Node.js 24, instala as versões do lockfile, executa os testes e publica somente a pasta `out/`. O caminho do site vem da configuração do Pages e é passado como `NEXT_PUBLIC_BASE_PATH` durante o build. O Next.js aplica esse prefixo às rotas e aos arquivos JavaScript/CSS; o logotipo também recebe o prefixo. A otimização de imagens no servidor fica desativada, pois o Pages serve arquivos estáticos.
+
+Localmente, a variável fica vazia e `npm run dev`, `npm run build` e `npm run preview` continuam usando a raiz `/`. Para gerar manualmente o build com o prefixo do Pages no Bash:
+
+```bash
+NEXT_PUBLIC_BASE_PATH=/espaco-equilibrio-front npm run build
+```
+
+Esse build precisa ser servido sob `/espaco-equilibrio-front/`; para voltar à prévia local habitual, execute `npm run build` sem a variável e depois `npm run preview`.
+
+**Repositório privado:** GitHub Pages em repositórios privados exige um plano compatível, como GitHub Pro. No GitHub Free, o repositório precisa ser público. Consulte a [documentação do GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site). A configuração do workflow não altera a visibilidade do repositório.
+
 ## Acessos e telas
 
 E-mail e senha na entrada são ilustrativos: **nenhum preenchimento é necessário**.
